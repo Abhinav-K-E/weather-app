@@ -7,11 +7,11 @@
 	--p-shade-50: #0e1b2d;
 	--p-shade-30: #13263e;
 	--p-shade-20: #162b47;
-	--primary: #1b3659;
+	--primary: #001633;
 	--p-tint-40: #76869b;
 	--p-tint-90: #e8ebee;
-	--secondary: #EFA00B;
-	--tertiary: #03B5AA;
+	--secondary: #15C2DA;
+	--tertiary: #8e03b5;
 
 	--global-border-radius: 4px;
 	--global-transition: all .2s ease-in-out;
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1rem;
+	font-size: .8rem;
 	line-height: 1.25;
 	margin: 0;
 }
@@ -88,7 +88,9 @@ a:hover {
     align-items: center;
 }
 
+/* ================================================= */
 /*Form*/
+/* ================================================= */
 
 form {
     width: 100%;
@@ -139,7 +141,7 @@ form button{
 }
 
 button:hover{
-    background-color: var(--p-shade-80);
+    background-color: var(--p-shade-30);
 }
 
 button:active{
@@ -165,19 +167,6 @@ button:active{
     z-index: 1;
 }
 
-/* ================================================= */
-/* Header */
-/* ================================================= */
-
-.notification {
-	background-color: var(--p-shade-80);
-	padding: .5rem 2rem;
-	width: 100%;
-}
-
-.notification p {
-	margin: 0;
-}
 
 /* ================================================= */
 /* Cities */
@@ -194,12 +183,12 @@ button:active{
 .cities >li{
     display: flex;
     gap: 1.5rem;
-    background-color: #fff;
+    background-color: #ffffffee;
     align-items: center;
     padding: 1.5rem;
     color: var(--p-shade-80);
     border-radius: var(--global-border-radius);
-    box-shadow: 8px 8px 0px rgba(255, 255, 255, .08);
+    box-shadow: 8px 8px 0px rgba(4, 197, 207, 0.342);
 }
 
 .city_condition{
@@ -213,6 +202,24 @@ button:active{
     padding: .125rem .25rem;
     border-radius: var(--global-border-radius);
     margin-left: .5rem;
+}
+
+/* ================================================= */
+/* little bit animation */
+/* ================================================= */
+
+li:hover figure{
+    animation: mover 2s ease-out infinite;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
 
 /* ================================================= */
@@ -238,6 +245,7 @@ button:active{
 /* ================================================= */
 /* 768px+ */
 /* ================================================= */
+
 @media screen and (min-width: 768px) {
 	.notification {
 		padding: .5rem 4rem;
@@ -246,4 +254,20 @@ button:active{
 	.container {
 		padding: 4rem;
 	}
+}
+
+/* ================================================= */
+/* 410px- */
+/* ================================================= */
+
+
+
+@media screen and (max-width: 410px) {
+	h1{
+        font-size: 1.8rem;
+    }
+    .container {
+        padding: 3rem 2rem;
+    }
+    
 }
