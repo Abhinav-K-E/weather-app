@@ -110,12 +110,17 @@ input{
 
 input[type="text"]{
     height: 2.7rem;
-    background: var(--p-shade-30) url("./img/search.svg") .75rem center no-repeat;
+    background-color: var(--p-shade-30);
     color: var(--p-tint-90);
     outline: none;
     flex-grow: 1;
     transition: var(--global-transition);
     padding-left: 2rem;
+}
+
+input[type="text"]:focus{
+    background-color: var(--p-tint-90);
+    color: var(--p-shade-50);
 }
 
 input::placeholder{
@@ -142,6 +147,7 @@ form button{
 
 button:hover{
     background-color: var(--p-shade-30);
+    color: var(--secondary);
 }
 
 button:active{
@@ -188,7 +194,12 @@ button:active{
     padding: 1.5rem;
     color: var(--p-shade-80);
     border-radius: var(--global-border-radius);
-    box-shadow: 8px 8px 0px rgba(4, 197, 207, 0.342);
+    box-shadow: 1px 1px 0px #1f9dc0c8,
+    2px 2px 0px #1f9dc0c8,
+    3px 3px 0px #1f9dc0c8,
+    4px 4px 0px #1f9dc0c8,
+    5px 5px 0px #1f9dc0c8,
+    6px 6px 0px #1f9dc0c8;
 }
 
 .city_condition{
